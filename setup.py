@@ -19,6 +19,9 @@ setup(
     description='Extensible data structure traversal in the command line',
     long_description=longdescr,
     packages=find_packages('.'),
+    install_requires=[
+        "pygments",
+    ],
     entry_points={
         'console_scripts': [
             'lens = lens:run',
