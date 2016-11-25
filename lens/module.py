@@ -11,14 +11,14 @@ def find_module(name):
 
 
 def find_by_pip(name):
-    key = "lens_{}".format(name)
+    key = "lens-{}".format(name)
     modules = [p for p in pip.get_installed_distributions()
                  if p.key == key]
 
     if not modules:
         raise NotFound(name)
 
-    module = modules[0]
+    module = __import__("lens_{}".format(name))
 
     if not hasattr(module, 'Parser'):
         raise WrongFormat(name)

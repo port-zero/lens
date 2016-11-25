@@ -115,6 +115,9 @@ The plugins can be third party `pip` modules, in which case they
 should follow the naming scheme `lens_{format-name}` and export
 the parser under the name `Parser`.
 
+An example of a plugin can be found in the [bson](https://github.com/port-zero/lens_bson)
+parser.
+
 That is all you need to know!
 
 <hr/>
