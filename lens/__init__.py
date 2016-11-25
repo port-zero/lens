@@ -18,4 +18,5 @@ def run():
 
     treated = run_module(module, keys, args.input)
 
-    prettyprint(module, treated)
+    if treated:
+        prettyprint(module, treated)
