@@ -13,4 +13,4 @@ class Parser(LensParser):
         for key in keys:
             loaded = loaded[key]
 
-        return json.dumps(loaded)
+        return json.dumps(loaded, indent=2)
