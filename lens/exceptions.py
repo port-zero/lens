@@ -15,4 +15,4 @@ class WrongFormat(LensError):
 
 class LensNotConfigured(LensError):
     def __str__(self):
-        return "Parser {} does not implement lens specifications"
+        return "Parser {} does not implement lens specifications".format(self.name)
