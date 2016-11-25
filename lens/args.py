@@ -6,6 +6,7 @@ def parse_args():
 
     parser = argparse.ArgumentParser(description=descr)
     parser.add_argument('--input', '-i', default=sys.stdin,
+                        type=argparse.FileType('r'),
                         help='the input file (defaults to the standard input)')
     parser.add_argument('keys', metavar='key', nargs='*',
                         help='the keys to traverse')
