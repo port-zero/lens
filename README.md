@@ -2,6 +2,8 @@
 
 `lens` is a command line tool for easy traversal and
 pretty printing fo data structures from the terminal.
+It is extensible.
+
 Uses the great [Pygments](http://pygments.org/) library.
 
 It should work on both Python 2 and 3, but was developed
@@ -96,7 +98,24 @@ We can also read from files by providing an `-i` option.
 
 ## Extending
 
-Coming soon.
+You can write your own parsers/traversers - admittedly, parsers
+is not a great name, but for now we stick with it.
+
+They should inherit from `LensParser` in `lens.parsers.base`,
+and at least implement the method `treat(self, inpt, keys)`,
+where `inpt` is the input string and `keys` are the keys to
+traverse. It should return the traversed data structure as a
+string.
+
+Optionally, the parser can specify a Pygments lexer by exposing
+the static attribute `lexer`, if highlighting is applicable. It
+will work without one, though.
+
+The plugins can be third party `pip` modules, in which case they
+should follow the naming scheme `lens_{format-name}` and export
+the parser under the name `Parser`.
+
+That is all you need to know!
 
 <hr/>
 
