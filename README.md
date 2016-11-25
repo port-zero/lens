@@ -4,6 +4,9 @@
 pretty printing fo data structures from the terminal.
 Uses the great [Pygments](http://pygments.org/) library.
 
+It should work on both Python 2 and 3, but was developed
+with Python 3 in mind.
+
 ## Installation
 
 The package is not yet registered to PyPI. As soon as it is, you will
