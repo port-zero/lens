@@ -90,7 +90,7 @@ $ curl -s https://httpbin.org/xml | lens -f=xml
 </slideshow>
 
 # suppose we want to only get the title of the second slide
-$ curl -s https://httpbin.org/xml | lens -f=xml 1 title
+$ curl -s https://httpbin.org/xml | lens -f=xml slide 1 title
 <title>Overview</title>
 ```
 
@@ -115,8 +115,8 @@ The plugins can be third party `pip` modules, in which case they
 should follow the naming scheme `lens_{format-name}` and export
 the parser under the name `Parser`.
 
-An example of a plugin can be found in the [bson](https://github.com/port-zero/lens_bson)
-parser.
+An example of a plugin can be found in the
+[bson](https://github.com/port-zero/lens_bson) parser repository.
 
 That is all you need to know!
 
