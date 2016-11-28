@@ -11,19 +11,12 @@ with Python 3 in mind.
 
 ## Installation
 
-The package is not yet registered to PyPI. As soon as it is, you will
-be able to install it with pip.
+The package is yet registered to PyPI. That means you should
+be able to install it with pip. `lens` was already taken, so
+we used `lens-cli`.
 
 ```
-pip install lens
-```
-
-In the meantime, you can install it like so:
-
-```
-git clone https://github.com/port-zero/lens
-cd lens
-python setup.py install
+pip install lens-cli
 ```
 
 ## Usage

@@ -11,12 +11,13 @@ longdescr = open(
 
 
 setup(
-    name='lens',
+    name='lens-cli',
     author='Veit Heller',
-    version='0.0.1',
+    version='0.0.2',
     license='MIT',
     url='https://github.com/port-zero/lens',
     description='Extensible data structure traversal in the command line',
+    download_url = 'https://github.com/port-zero/lens/tarball/0.1',
     long_description=longdescr,
     packages=find_packages('.'),
     install_requires=[
