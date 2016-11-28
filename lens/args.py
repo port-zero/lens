@@ -12,5 +12,8 @@ def parse_args():
                         help='the keys to traverse')
     parser.add_argument('--format', '-f', default='json',
                         help='the data format to consume (defaults to json)')
+    parser.add_argument('--no-highlight', '-n', type=bool,
+                        help='prevent syntax highlighting')
+
 
     return parser.parse_args()

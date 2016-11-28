@@ -5,11 +5,11 @@ from setuptools import setup, find_packages
 setup(
     name='lens-cli',
     author='Veit Heller',
-    version='0.0.5',
+    version='0.1.0',
     license='MIT',
     url='https://github.com/port-zero/lens',
     description='Extensible data structure traversal in the command line',
-    download_url = 'https://github.com/port-zero/lens/tarball/0.0.5',
+    download_url = 'https://github.com/port-zero/lens/tarball/0.1.0',
     packages=find_packages('.'),
     install_requires=[
         "pygments",

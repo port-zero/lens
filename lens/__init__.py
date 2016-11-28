@@ -19,4 +19,4 @@ def run():
     treated = run_module(module, keys, args.input)
 
     if treated:
-        prettyprint(module, treated)
+        prettyprint(module, treated, args.no_highlight)
