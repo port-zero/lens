@@ -2,23 +2,14 @@
 import os
 from setuptools import setup, find_packages
 
-longdescr = open(
-    os.path.join(
-        os.path.dirname(__file__),
-        'README.md'
-    )
-).read()
-
-
 setup(
     name='lens-cli',
     author='Veit Heller',
-    version='0.0.4',
+    version='0.0.5',
     license='MIT',
     url='https://github.com/port-zero/lens',
     description='Extensible data structure traversal in the command line',
-    download_url = 'https://github.com/port-zero/lens/tarball/0.0.4',
-    long_description=longdescr,
+    download_url = 'https://github.com/port-zero/lens/tarball/0.0.5',
     packages=find_packages('.'),
     install_requires=[
         "pygments",
