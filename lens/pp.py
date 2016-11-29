@@ -1,8 +1,10 @@
+import sys
+
 import pygments
 from pygments.formatters import TerminalFormatter
 
 def prettyprint(module, output, no_highlight):
-    if module.lexer and not no_highlight:
+    if module.lexer and not no_highlight and sys.stdout.isatty():
         output = pygments.highlight(output,
                                     module.lexer(),
                                     TerminalFormatter())

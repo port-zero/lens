@@ -92,6 +92,9 @@ $ curl -s https://httpbin.org/xml | lens -f=xml slide 1 title
 ```
 
 We can also read from files by providing an `-i` option.
+lens also discovers if its output is redirected to a file, in which case
+no syntax highlighting will be applies (the same can be achieved through
+the `--no-highlighting/-n` option).
 
 ## Extending
 
