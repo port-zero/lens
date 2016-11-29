@@ -24,7 +24,9 @@ pip install lens-cli
 Calling `lens -h` will print this message:
 
 ```
-usage: lens [-h] [--input INPUT] [--format FORMAT] [key [key ...]]
+usage: lens [-h] [--input INPUT] [--format FORMAT]
+            [--no-highlight NO_HIGHLIGHT]
+            [key [key ...]]
 
 Extensible data structure traversal from the command line
 
@@ -37,6 +39,8 @@ optional arguments:
                         the input file (defaults to the standard input)
   --format FORMAT, -f FORMAT
                         the data format to consume (defaults to json)
+  --no-highlight NO_HIGHLIGHT, -n NO_HIGHLIGHT
+                        prevent syntax highlighting
 ```
 
 This should be relatively straightforward. Let's go through a few examples:
