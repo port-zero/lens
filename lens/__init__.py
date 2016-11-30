@@ -1,5 +1,5 @@
 from lens.args       import parse_args
-from lens.module     import find_module
+from lens.module     import find_module, get_and_print_formats
 from lens.runner     import run_module
 from lens.exceptions import LensError
 from lens.pp         import prettyprint
@@ -7,6 +7,10 @@ from lens.keys       import treat_keys
 
 def run():
     args = parse_args()
+
+    if args.formats:
+        get_and_print_formats()
+        return
 
     try:
         module = find_module(args.format)

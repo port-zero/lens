@@ -3,6 +3,18 @@ import pip
 from lens.exceptions import NotFound, WrongFormat
 from lens.parsers    import parsers
 
+def get_and_print_formats():
+    formats = list(parsers.keys())
+
+    key = "lens-"
+    keyl = len(key)
+    for p in pip.get_installed_distributions():
+        if p.key.startswith(key):
+            formats.append(p.key[keyl:])
+
+    print(", ".join(formats))
+
+
 def find_module(name):
     if name in parsers:
         return parsers[name]

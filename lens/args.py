@@ -14,6 +14,7 @@ def parse_args():
                         help='the data format to consume (defaults to json)')
     parser.add_argument('--no-highlight', '-n', type=bool,
                         help='prevent syntax highlighting')
-
+    parser.add_argument('--formats', action='store_true',
+                        help='print available formats')
 
     return parser.parse_args()
