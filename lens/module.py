@@ -1,4 +1,4 @@
-import pip
+import pkg_resources
 
 from lens.exceptions import NotFound, WrongFormat
 from lens.parsers    import parsers
@@ -8,8 +8,8 @@ def get_and_print_formats():
 
     key = "lens-"
     keyl = len(key)
-    for p in pip.get_installed_distributions():
-        if p.key.startswith(key):
+    for p in pkg_resources.working_set:
+        if p.key.startswith(key) and p.key != 'lens-cli':
             formats.append(p.key[keyl:])
 
     print(", ".join(formats))
@@ -19,12 +19,12 @@ def find_module(name):
     if name in parsers:
         return parsers[name]
 
-    return find_by_pip(name)
+    return find_external(name)
 
 
-def find_by_pip(name):
+def find_external(name):
     key = "lens-{}".format(name)
-    modules = [p for p in pip.get_installed_distributions()
+    modules = [p for p in pkg_resources.working_set
                  if p.key == key]
 
     if not modules:
