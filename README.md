@@ -112,7 +112,7 @@ the static attribute `lexer`, if highlighting is applicable. It
 will work without one, though.
 
 The plugins can be third party `pip` modules, in which case they
-should follow the naming scheme `lens_{format-name}` and export
+should follow the naming scheme `lens-{format-name}` and export
 the parser under the name `Parser`.
 
 An example of a plugin can be found in the
